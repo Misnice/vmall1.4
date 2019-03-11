@@ -1,34 +1,9 @@
 @import 'public';
-//body{
-//  width: 100%;
-//  height: 100%;
-//  background: #F9F9F9;
-//}
 
 // 只在sass中注释，不被编译到css中
 /* 这种方式 可以一起编译到css中*/
 /* 选择器嵌套*/
-//#box{
-//  width : 100%;
-//  height : 500px;
-//  border: 1px solid black;
-//  .top{
-//      width: 100%;
-//      height: 300px;
-//      .mark{
-//          width: 100%;
-//          height: 300px;
-//          #header &{ // & :  #box .top .mark
-//              height: 200px;
-//          }
-//      }
-//      
-//  }
-//  .bottom{
-//      width: 100%;
-//      height: 200px;
-//  }
-//}
+
 /*nav*/
 .nav{height:36px;background:#f9f9f9;
     .n-c{width:1200px;height:36px;margin:0 auto;
@@ -88,22 +63,17 @@
     }
 }
 /*slide*/
-.box{height:550px;
+.box{height:550px;width:1263px;margin:0 auto;
     .slide{
-        li{position:absolute;}
+        li{position:absolute;
+            img{width:100%;height:550px;display:block;}
+        }
+        
     }
 }
 
-
-
-
-
-
-
-
- 
-/*h*/
-.h{
+/*im*/
+.im{
     width:1200px;margin:0 auto;overflow:hidden;
     ul{
         li{
@@ -117,14 +87,13 @@
 .phone{width:1200px;margin:0 auto;overflow:hidden;
     h2{font-size:26px;font-weight:normal;color:#333;padding:27px 0 13px 0;};
     .p-c{overflow:hidden;
-        .p-c-l{float:left;
-            
+        .p-c-l{float:left;  
         }
         .p-c-r{float:left;width:968px;height:604px;
-            ul{
+            ul{ 
                 li{float:left;width:230px;height:290px;text-align:center;
                     margin-left:12px;margin-bottom:12px;
-                    background:#F9F9F9;
+                    background:#F9F9F9;border-radius:8px;
                     img{display:block;width:150px;height:150px;padding-left:40px;
                         padding-top:40px;}
                     p{padding-top:12px;color:#777;font-size:14px;}
@@ -132,18 +101,102 @@
                     font-size:14px}
                     b{display:block;font-weight:normal;color:red;font-size:14px}             
                 }
+               
             }
         }
     }
+}
+/*nice*/
+/*slide2*/
+.box2{width:1200px;height:120px;margin:0 auto;position:relative;
+    .slide2{
+        li{position:absolute;
+            img{display:block;border-radius:10px;}
+        }
+    }
+}
+/*手机ph*/
+.ph{width:1200px;overflow:hidden;margin:0 auto;
+    .ph-t{width:1200px;height:32px;line-height:32px;padding:27px 0 12px;
+        ul{
+            li{float:left;margin-right:24px;
+                a{color:#999;font-size:14px;}
+            }
+            li:first-child a{font-size:30px;color:black;}
+        }
+        .ph-t-r{float:right;
+            a{color:black;font-size:14px;}
+        }       
+    }
+    .ph-b{
+        ul{
+            li{float:left;width:230px;height:290px;text-align:center;
+                margin-left:12px;margin-bottom:12px;
+                background:#F9F9F9;border-radius:8px;
+                img{display:block;width:150px;height:150px;padding-left:40px;
+                    padding-top:40px;}
+                p{padding-top:12px;color:#777;font-size:14px;}
+                span{display:block;padding:5px 0px;font-size:16px;color:#777;
+                font-size:14px}
+                b{display:block;font-weight:normal;color:red;font-size:14px}             
+            }
+            li:first-child{margin-left:0;}
+            li:first-child img{width:230px;height:290px;padding:0;border-radius:8px;}
+            li:nth-child(6){margin-left:0;}
+            li:nth-child(11){margin-left:0;}
+        }
+        
+    }
+}
+/*智能穿戴*/
+.zncd{
+    .ph-b{
+        ul{
+            li:first-child{margin-left:0;width:472px;}
+            li:first-child img{width:100%;}
+            li:nth-child(5){margin-left:0;}
+            li:nth-child(6){margin-left:12px;}
+        }
+    }
+}
+/*广告*/
+.ad{width:1200px;margin:0 auto;
+    img{display:block;border-radius:14px;}    
+}
+/*底部*/
+.bot{background:#f9f9f9;overflow:hidden;
+    .bot-c{width:1200px;margin:0 auto;
+        .bot-c-t{width:1200px;margin:0 auto;height:46px;line-height:82px;
+    padding:18px 0;
+             ul{
+                li{float:left;height:46px;line-height:46px;cursor:pointer;
+               padding-right:120px;
+                    b{float:left;display:block;width:46px;height:46px;
+                    background:url(../img/index-icon/icon-common.png) no-repeat -0px -151px;}
+                    a{display:block;float:left;color:#3a3a3a;padding-left:15px;}
+                }
+                li:last-child{padding-right:0;}
+            }
+        }
+        .bot-c-c{width:1200px;background:red;
+            dl{width:153px;float:left;
+                dt{font-size:14px;color:#333;}
+                
+            }
             
-        
-        
+        }
        
-        
-       
-    
+    }
     
 }
+
+
+
+
+
+
+
+
 /*aaa*/
 .aaa{width:1200px;height:10px;background:#A4A4A4;margin:0 auto;}
 

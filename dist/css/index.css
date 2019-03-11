@@ -148,22 +148,28 @@ a {
 
 /*slide*/
 .box {
-  height: 550px; }
+  height: 550px;
+  width: 1263px;
+  margin: 0 auto; }
   .box .slide li {
     position: absolute; }
+    .box .slide li img {
+      width: 100%;
+      height: 550px;
+      display: block; }
 
-/*h*/
-.h {
+/*im*/
+.im {
   width: 1200px;
   margin: 0 auto;
   overflow: hidden; }
-  .h ul li {
+  .im ul li {
     float: left;
     margin-left: 13px; }
-    .h ul li img {
+    .im ul li img {
       display: block;
       border-radius: 15px; }
-  .h ul li:first-child {
+  .im ul li:first-child {
     margin-left: 0; }
 
 /*phone*/
@@ -191,7 +197,8 @@ a {
         text-align: center;
         margin-left: 12px;
         margin-bottom: 12px;
-        background: #F9F9F9; }
+        background: #F9F9F9;
+        border-radius: 8px; }
         .phone .p-c .p-c-r ul li img {
           display: block;
           width: 150px;
@@ -213,6 +220,149 @@ a {
           font-weight: normal;
           color: red;
           font-size: 14px; }
+
+/*nice*/
+/*slide2*/
+.box2 {
+  width: 1200px;
+  height: 120px;
+  margin: 0 auto;
+  position: relative; }
+  .box2 .slide2 li {
+    position: absolute; }
+    .box2 .slide2 li img {
+      display: block;
+      border-radius: 10px; }
+
+/*手机ph*/
+.ph {
+  width: 1200px;
+  overflow: hidden;
+  margin: 0 auto; }
+  .ph .ph-t {
+    width: 1200px;
+    height: 32px;
+    line-height: 32px;
+    padding: 27px 0 12px; }
+    .ph .ph-t ul li {
+      float: left;
+      margin-right: 24px; }
+      .ph .ph-t ul li a {
+        color: #999;
+        font-size: 14px; }
+    .ph .ph-t ul li:first-child a {
+      font-size: 30px;
+      color: black; }
+    .ph .ph-t .ph-t-r {
+      float: right; }
+      .ph .ph-t .ph-t-r a {
+        color: black;
+        font-size: 14px; }
+  .ph .ph-b ul li {
+    float: left;
+    width: 230px;
+    height: 290px;
+    text-align: center;
+    margin-left: 12px;
+    margin-bottom: 12px;
+    background: #F9F9F9;
+    border-radius: 8px; }
+    .ph .ph-b ul li img {
+      display: block;
+      width: 150px;
+      height: 150px;
+      padding-left: 40px;
+      padding-top: 40px; }
+    .ph .ph-b ul li p {
+      padding-top: 12px;
+      color: #777;
+      font-size: 14px; }
+    .ph .ph-b ul li span {
+      display: block;
+      padding: 5px 0px;
+      font-size: 16px;
+      color: #777;
+      font-size: 14px; }
+    .ph .ph-b ul li b {
+      display: block;
+      font-weight: normal;
+      color: red;
+      font-size: 14px; }
+  .ph .ph-b ul li:first-child {
+    margin-left: 0; }
+  .ph .ph-b ul li:first-child img {
+    width: 230px;
+    height: 290px;
+    padding: 0;
+    border-radius: 8px; }
+  .ph .ph-b ul li:nth-child(6) {
+    margin-left: 0; }
+  .ph .ph-b ul li:nth-child(11) {
+    margin-left: 0; }
+
+/*智能穿戴*/
+.zncd .ph-b ul li:first-child {
+  margin-left: 0;
+  width: 472px; }
+
+.zncd .ph-b ul li:first-child img {
+  width: 100%; }
+
+.zncd .ph-b ul li:nth-child(5) {
+  margin-left: 0; }
+
+.zncd .ph-b ul li:nth-child(6) {
+  margin-left: 12px; }
+
+/*广告*/
+.ad {
+  width: 1200px;
+  margin: 0 auto; }
+  .ad img {
+    display: block;
+    border-radius: 14px; }
+
+/*底部*/
+.bot {
+  background: #f9f9f9;
+  overflow: hidden; }
+  .bot .bot-c {
+    width: 1200px;
+    margin: 0 auto; }
+    .bot .bot-c .bot-c-t {
+      width: 1200px;
+      margin: 0 auto;
+      height: 46px;
+      line-height: 82px;
+      padding: 18px 0; }
+      .bot .bot-c .bot-c-t ul li {
+        float: left;
+        height: 46px;
+        line-height: 46px;
+        cursor: pointer;
+        padding-right: 120px; }
+        .bot .bot-c .bot-c-t ul li b {
+          float: left;
+          display: block;
+          width: 46px;
+          height: 46px;
+          background: url(../img/index-icon/icon-common.png) no-repeat 0px -151px; }
+        .bot .bot-c .bot-c-t ul li a {
+          display: block;
+          float: left;
+          color: #3a3a3a;
+          padding-left: 15px; }
+      .bot .bot-c .bot-c-t ul li:last-child {
+        padding-right: 0; }
+    .bot .bot-c .bot-c-c {
+      width: 1200px;
+      background: red; }
+      .bot .bot-c .bot-c-c dl {
+        width: 153px;
+        float: left; }
+        .bot .bot-c .bot-c-c dl dt {
+          font-size: 14px;
+          color: #333; }
 
 /*aaa*/
 .aaa {

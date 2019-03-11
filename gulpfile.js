@@ -17,7 +17,7 @@ gulp.task('default',()=>{
 //打包图片任务
 //gulp.task('img',function(){
 //	
-//	gulp.src('./src/img/index/*.*')
+//	gulp.src('./src/img/index-icon/*.*')
 //	.pipe(imagemin())
-//  .pipe(gulp.dest('./dist/img/index'))
+//  .pipe(gulp.dest('./dist/img/index-icon'))
 //})
