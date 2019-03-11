@@ -317,7 +317,9 @@ a {
 /*广告*/
 .ad {
   width: 1200px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 60px; }
   .ad img {
     display: block;
     border-radius: 14px; }
@@ -356,13 +358,86 @@ a {
         padding-right: 0; }
     .bot .bot-c .bot-c-c {
       width: 1200px;
-      background: red; }
+      padding: 24px 0 24px;
+      overflow: hidden; }
       .bot .bot-c .bot-c-c dl {
         width: 153px;
         float: left; }
         .bot .bot-c .bot-c-c dl dt {
+          height: 28px;
+          line-height: 28px;
+          padding-bottom: 7px;
           font-size: 14px;
           color: #333; }
+        .bot .bot-c .bot-c-c dl dd {
+          height: 22px;
+          line-height: 22px;
+          font-size: 12px;
+          color: #777; }
+      .bot .bot-c .bot-c-c .bot-c-c-r {
+        float: left;
+        width: 209px;
+        height: 160px;
+        border-left: 1px solid #e5e5e5;
+        text-align: center; }
+      .bot .bot-c .bot-c-c b {
+        font-size: 24px;
+        height: 36px;
+        line-height: 36px; }
+      .bot .bot-c .bot-c-c p {
+        height: 16px;
+        line-height: 16px;
+        font-size: 14px;
+        color: #575757;
+        cursor: pointer; }
+      .bot .bot-c .bot-c-c i {
+        font-style: normal;
+        display: block;
+        width: 170px;
+        height: 34px;
+        font-size: 14px;
+        line-height: 34px;
+        background: #333;
+        cursor: pointer;
+        border-radius: 17px;
+        margin: 0 auto;
+        margin-top: 10px;
+        color: #fff; }
+      .bot .bot-c .bot-c-c p:last-child {
+        margin-top: 26px; }
+    .bot .bot-c .bot-c-b {
+      overflow: hidden;
+      padding: 22px 0 22px; }
+      .bot .bot-c .bot-c-b img {
+        float: right;
+        margin-right: 0;
+        width: 70px; }
+      .bot .bot-c .bot-c-b .bot-c-b-c {
+        float: left;
+        width: 820px;
+        height: 59px; }
+        .bot .bot-c .bot-c-b .bot-c-b-c ul li {
+          float: left;
+          font-size: 12px;
+          line-height: 14px;
+          color: #575757;
+          cursor: pointer;
+          padding-right: 6px;
+          border-right: 1px solid #d3d3d3;
+          margin-right: 6px; }
+        .bot .bot-c .bot-c-b .bot-c-b-c ul li:last-child {
+          border: 0;
+          padding: 0;
+          margin: 0; }
+        .bot .bot-c .bot-c-b .bot-c-b-c a {
+          font-size: 12px;
+          color: #a4a4a4; }
+      .bot .bot-c .bot-c-b img:first-child {
+        float: left;
+        margin-right: 20px;
+        width: 82px; }
+      .bot .bot-c .bot-c-b img:last-child {
+        margin-right: 20px; }
 
 /*aaa*/
 .aaa {
