@@ -79,74 +79,98 @@ function aaa(){
 slideBox();
 //轮播函数
 function slideBox(){
-	//获取元素
-	//1. 获取大盒子
-	const oBigBox = document.querySelector(".box");;
-	//2. 获取上半部
-	const oTop = document.querySelector(".box .slide");			
-	//7. 获取所有的大图
-	const oBigPic = oTop.getElementsByTagName('li');		
-	//16.1 声明一个控制轮播图片的下标
-	let indexCur = 0;
-	//16.2 声明控制大图轮播的zindex
-	let zIndex = 1;
-	//16.3 控制计时器变量
-	let timer = null;
-	slide();
-	autoPlay();
-	//19.设置轮播
-	function slide(){
-		//1.大图轮播
-		oBigPic[indexCur].style.zIndex = ++ zIndex;
-	}
-	//20. 自动轮播
-	function autoPlay(){
-		timer = setInterval(function(){
-			indexCur ++;
-			if(indexCur === oBigPic.length){
-				indexCur = 0;
+	var index = 0; //定义一个下标
+	var stop = false; //定义一个触发器
+	var $li = $("#banner").find(".warp").children(".item"); //获取所有的轮播图片
+	var $page = $("#banner").find(".bth-list").children(".bth"); //获取所有的圆点列表
+	$page.hover(function(){
+		index = $(this).index(); //把图片下标的值赋给定义下标
+		$(this).addClass("active").stop(true,true).siblings().removeClass("active"); //给鼠标选中的圆点列表添加样式
+		$li.eq(index).stop(true,true).fadeIn(1000).siblings().fadeOut(1000); //轮播图片淡入淡出效果
+	});
+	//左边点击按钮
+	$(".left").click(function(){
+		clearInterval(timer);
+		index--;
+		if(index < 0){
+			index = $li.length-1;
+		}
+		$li.eq(index).stop(true, true).fadeIn().siblings().fadeOut();
+		$page.eq(index).addClass("active").stop(true, true).siblings().removeClass("active");
+	});
+	//右边点击按钮
+	$(".right").click(function(){
+		clearInterval(timer);
+		index++;
+		if(index > $li.length-1){
+			index = 0;
+		}
+		$li.eq(index).stop(true,true).fadeIn().siblings().fadeOut();
+		$page.eq(index).addClass("active").stop(true, true).siblings().removeClass("active");
+	});
+	//自动轮播图片
+	var timer = setInterval(function() {
+		if(stop) return;
+		index++;
+		if(index > $li.length-1) {
+			index = 0;
+		}
+		$li.eq(index).stop(true, true).fadeIn().siblings().fadeOut();
+		$page.eq(index).addClass("active").stop(true, true).siblings().removeClass("active");
+	},5000);
+	//鼠标移入图片内，自动轮播停止
+	$("#banner").mousemove(function() {
+		clearInterval(timer);
+	}).mouseout(function() {
+		timer = setInterval(function() {
+			if(stop) return;
+			index++;
+			if(index > $li.length-1) {
+				index = 0;
 			}
-			slide();
-		},3000)
-	}
+			$li.eq(index).stop(true, true).fadeIn().siblings().fadeOut();
+			$page.eq(index).addClass("active").stop(true, true).siblings().removeClass("active");
+		},5000);
+	});
 }	
 
-//轮播
+//轮播slide2
 slideBox2();
-//轮播函数
 function slideBox2(){
-	//获取元素
-	//1. 获取大盒子
-	const oBigBox = document.querySelector(".box2");;
-	//2. 获取上半部
-	const oTop = document.querySelector(".box2 .slide2");			
-	//7. 获取所有的大图
-	const oBigPic = oTop.getElementsByTagName('li');		
-	//16.1 声明一个控制轮播图片的下标
-	let indexCur = 0;
-	//16.2 声明控制大图轮播的zindex
-	let zIndex = 1;
-	//16.3 控制计时器变量
-	let timer = null;
-	slide();
-	autoPlay();
-	//19.设置轮播
-	function slide(){
-		//1.大图轮播
-		oBigPic[indexCur].style.zIndex = ++ zIndex;
-	}
-	//20. 自动轮播
-	function autoPlay(){
-		timer = setInterval(function(){
-			indexCur ++;
-			if(indexCur === oBigPic.length){
-				indexCur = 0;
+	var index = 0; //定义一个下标
+	var stop = false; //定义一个触发器
+	var $li = $("#banner2").find(".warp2").children(".item2"); //获取所有的轮播图片
+	var $page = $("#banner2").find(".bth-list2").children(".bth2"); //获取所有的圆点列表
+	$page.hover(function() {	
+		index = $(this).index(); //把图片下标的值赋给定义下标
+		$(this).addClass("active2").stop(true,true).siblings().removeClass("active2"); //给鼠标选中的圆点列表添加样式
+		$li.eq(index).stop(true,true).fadeIn(1000).siblings().fadeOut(1000); //轮播图片淡入淡出效果
+	});
+	//自动轮播图片
+	var timer = setInterval(function() {
+		if(stop) return;
+		index++;
+		if(index > $li.length-1) {
+			index = 0;
+		}
+		$li.eq(index).stop(true, true).fadeIn().siblings().fadeOut();
+		$page.eq(index).addClass("active2").stop(true, true).siblings().removeClass("active2");
+	},5000);
+	//鼠标移入图片内，自动轮播停止
+	$("#banner2").mousemove(function() {
+		clearInterval(timer);
+	}).mouseout(function() {
+		var timer = setInterval(function() {
+			if(stop) return;
+			index++;
+			if(index > $li.length-1) {
+				index = 0;
 			}
-			slide();
-		},3000)
-	}
-}	
-
+			$li.eq(index).stop(true, true).fadeIn().siblings().fadeOut();
+			$page.eq(index).addClass("active2").stop(true, true).siblings().removeClass("active2");
+		},5000);
+	});
+}
 
 
 /***/ })
