@@ -3,6 +3,7 @@
 // 只在sass中注释，不被编译到css中
 /* 这种方式 可以一起编译到css中*/
 /* 选择器嵌套*/
+/*商品详情页nova*/
 
 /*nav*/
 .nav{height:36px;background:#f9f9f9;
@@ -54,7 +55,9 @@
         img:nth-child(1){width:205px;height:36px; padding-top:19px;margin-left:0;}
         span{margin-left:24px;font-size:16px;color:#333;}
         input{border:0;width:285px;height:30px;float:right;margin-top:22px;
-        background:#f0f0f0;border-radius:15px;padding:0 10px;}
+        background:#f0f0f0 url(../img/index-icon/icon-common.png) no-repeat 271px -21px;
+        border-radius:15px;padding:0 10px;}
+        #shift{cursor:pointer;}
         
     }
 }
@@ -394,6 +397,7 @@
             }
             img:first-child{float:left;margin-right:20px;width:82px;}
             img:last-child{margin-right:20px;}
+           
         }
        
     }
@@ -404,9 +408,4 @@
 
 
 
-
-
-
-/*aaa*/
-.aaa{width:1200px;height:10px;background:#A4A4A4;margin:0 auto;}
 

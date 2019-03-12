@@ -172,6 +172,17 @@ function slideBox2(){
 	});
 }
 
+//跳转shift
+sh();
+function sh(){
+	var oShift = document.getElementById("shift");
+	oShift.onclick = function(){
+		//跳转到详情页
+		location.href = "nova.html";
+	};
+}
+
+
 
 /***/ })
 /******/ ]);
